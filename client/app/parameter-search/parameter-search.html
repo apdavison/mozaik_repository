@@ -1,0 +1,30 @@
+<table class="table table-striped">
+	<thead>
+	  <th>Submission date</th>
+	  <th>Run date ~</th>
+	  <th>Name</th>
+	  <th>Model name</th>
+	  <th>Parameter combinations</th>
+	  <th>View individual runs</th>
+	  <th>Inspect results</th>
+	</thead>
+	<tbody>
+	  <tr ng-repeat="ps in $ctrl.parameterSearches">
+	    <td>{{ps.submission_date}}</td>
+	    <td>{{ps.simulation_runs[0].run_date}}</td>
+	    <td>{{ps.name.substring(ps.name.lastIndexOf(']')+1)}}</td>
+	    <td>{{ps.simulation_runs[0].model_name}}</td>
+	    <td>??</td>
+	    <td>
+	        <a href="/simruns/{{ps._id}}" class="btn  btn-sm">
+	          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+	        </a>
+	    </td>
+	    <td>
+	        <a href="/param-search-inspect/{{ps._id}}" class="btn  btn-sm">
+	          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+	        </a>
+	    </td>
+	  </tr>
+	</tbody>
+</table>

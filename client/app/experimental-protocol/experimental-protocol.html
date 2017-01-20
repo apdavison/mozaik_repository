@@ -1,0 +1,30 @@
+<h1>Recordings</h1>
+  <table class="table table-striped" style="overflow: auto;">
+    <thead>
+      <th style="width : 15%;">Class name</th>
+      <th style="width : 10%;">Source</th>
+      <th style="width : 15%;">Recorded variables</th>
+      <th style="width : 30%;">Short description</th>
+      <th style="width : 30%;">Long description</th>
+      <th style="width : 5%;">Parameters</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="rec in $ctrl.simRun.recorders">
+        <td>{{rec.class}}</td>
+        <td>{{rec.source}}</td>
+        <td>{{rec.variables}}</td>
+        <td>{{rec.short_description}}</td>
+        <td>  
+              <a ng-click="$ctrl.long_description_visible[$index]=!$ctrl.long_description_visible[$index]" class="btn  btn">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+              </a>
+              <p ng-show="$ctrl.long_description_visible[$index]">{{rec.long_description}}</p> 
+        </td>
+        <td>
+            <a ng-click="$ctrl.paramsModal(rec.params)" class="btn  btn">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

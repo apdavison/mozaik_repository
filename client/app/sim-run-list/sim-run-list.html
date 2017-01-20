@@ -1,0 +1,41 @@
+<h1>Simulation runs</h1>
+  <table class="table table-striped">
+    <thead>
+      <th>Submission date</th>
+      <th>Run date</th>
+      <th>Run name</th>
+      <th>Model name</th>
+      <th>View params</th>
+      <th>View stim</th>
+      <th>View exp. prot</th>
+      <th>View results</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="simrun in $ctrl.simulationRuns">
+        <td>{{simrun.submission_date}}</td>
+        <td>{{simrun.run_date}}</td>
+        <td>{{simrun.simulation_run_name}}</td>
+        <td>{{simrun.model_name}}</td>
+        <td>
+            <a href="/param-view/{{simrun._id}}" class="btn  btn">
+              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </a>
+        </td>
+         <td>
+            <a href="/stimuli/{{simrun._id}}" class="btn  btn">
+              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </a>
+        </td>
+        <td>
+            <a href="/experimental-protocol/{{simrun._id}}" class="btn  btn">
+              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </a>
+        </td>
+        <td>
+            <a href="/results/{{simrun._id}}" class="btn  btn">
+              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

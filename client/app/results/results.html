@@ -1,0 +1,19 @@
+<h1>Results</h1>
+  <table class="table table-striped" style="overflow: auto;">
+    <thead>
+      <th>Class name</th>
+      <th>File name</th>
+      <th>Figure</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="simrun in $ctrl.simRun.results">
+        <td>{{simrun.class_name}}</td>
+        <td>{{simrun.file_name}}</td>
+        <td>
+        	    <a ng-click="$ctrl.openLightboxModal($index)" href>
+                  <img ng-src="/api/simulation-runs/images/{{simrun.figure._id}}" class="img-thumbnail" style="min-height:70px; max-height:70px;">
+              </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
