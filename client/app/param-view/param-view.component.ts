@@ -2,8 +2,8 @@
 const angular = require('angular');
 const ngRoute = require('angular-route');
 
-import '../../../bower_components/angular-ui-tree/dist/angular-ui-tree.js';
-import '../../../bower_components/angular-ui-tree/dist/angular-ui-tree.css';
+import '../../bower_components/angular-ui-tree/dist/angular-ui-tree.js';
+import '../../bower_components/angular-ui-tree/dist/angular-ui-tree.css';
 
 import routes from './param-view.routes';
 
