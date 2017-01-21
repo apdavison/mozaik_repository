@@ -12,6 +12,7 @@
     "angular-route": "~1.5.5",
     "angular-sanitize": "~1.5.5",
     "angular-ui-bootstrap": "^2.0.1",
+    "angular-ui-tree": "^2.22.2",
     "angular-validation-match": "^1.9.0",
     "angularjs-slider": "^5.8.0",
     "babel-polyfill": "^6.7.2",
