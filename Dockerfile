@@ -9,7 +9,7 @@ RUN npm install -g yo gulp-cli bower gulp
 
 WORKDIR /usr/src
 
-RUN git clone https://github.com/antolikjan/mozaik_repository.git 
+RUN git clone https://github.com/antolikjan/mozaik_repository.git  
 
 WORKDIR /usr/src/mozaik_repository
 
