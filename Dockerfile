@@ -18,6 +18,7 @@ RUN chown -R node:node /usr/src/mozaik_repository
 
 USER node
 RUN npm install 
+RUN npm install typescript@2.0.3
 
 RUN pwd
 RUN ls

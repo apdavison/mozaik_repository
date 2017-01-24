@@ -8,8 +8,7 @@ module.exports = {
   // MongoDB connection options
   mongo: {
     uri: process.env.MONGODB_URI
-     // || 'mongodb://localhost/mozaikrepository'
-  
+      || 'mongodb://localhost/mozaikrepository-dev'
   },
 
   // Seed database on startup

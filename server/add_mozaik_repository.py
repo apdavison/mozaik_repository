@@ -102,7 +102,7 @@ class ParametersEncoder(json.JSONEncoder):
 def openMongoDB():
     #### MONGODB STUFF #######
     client = MongoClient()
-    db = client["mozaikrepository-dev"]
+    db = client["mozaikrepository"]
     gfs = gridfs.GridFS(db)
     return gfs,db
 

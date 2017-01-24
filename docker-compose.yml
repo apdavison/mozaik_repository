@@ -5,11 +5,13 @@ app:
   ports:
    - "3000:3000" # change to whatever port is to be used
   environment:
-   - MONGODB_URI=db:27017
+   - MONGODB_URI=db:27017/mozaikrepository
    - NODE_ENV=development # production for staging
   #env_file:
   # - ./server/config/environment/development.js # required only if you have environment settings to load
 db:
   image: mongo
+  volumes:
+    - ./data/db:/data/db
   ports:
    - "27017:27017"
